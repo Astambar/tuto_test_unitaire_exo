@@ -1,8 +1,9 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-import unittest
 import sys
-from fonction import add, sub, mul, div, squared, pow
+import unittest
+sys.path.append('../')
+from fonction import *
 
 class TestStringMethods(unittest.TestCase):
 
@@ -18,6 +19,8 @@ class TestStringMethods(unittest.TestCase):
         self.assertEqual(squared.squared(2), 4)
     def test_pow(self):
         self.assertEqual(pow.pow(3,2), 9)
+    def test_modulo(self):
+        self.assertEqual(modulo.modulo(3,2), 1)
 
 if __name__ == '__main__':
     unittest.main()
