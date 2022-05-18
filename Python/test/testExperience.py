@@ -21,6 +21,14 @@ class TestStringMethods(unittest.TestCase):
         self.assertEqual(pow.pow(3,2), 9)
     def test_modulo(self):
         self.assertEqual(modulo.modulo(3,2), 1)
+    def test_modulo(self):
+        self.assertEqual(modulo.modulo(3,3), 0)
+    def test_str_concat(self):
+        self.assertEqual(str_concat.str_concat('3','2'), '32')
+    def test_add(self):
+        self.assertEqual(loop_function.loop_function('add',0,1,1), "erreur")
+    def test_squared(self):
+        self.assertEqual(loop_function.loop_function('squared',3,5), 25)
 
 if __name__ == '__main__':
     unittest.main()

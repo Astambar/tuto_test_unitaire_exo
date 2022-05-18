@@ -1,1 +1,0 @@
-from Python.test import *

@@ -1,4 +1,3 @@
-from Python.fonction import *
 __all__ = ["add",
            "div",
            "modulo",
@@ -6,4 +5,6 @@ __all__ = ["add",
            "pow",
            "squared",
            "sub",
+           "str_concat",
+           "loop_function",
            ]
