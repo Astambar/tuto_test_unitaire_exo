@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-from fonction import mul
+from fonction.mul import mul
 
 def squared(a):
-    return mul.mul(a,a)
+    return mul(a,a)
