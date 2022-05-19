@@ -1,30 +1,18 @@
 #!/usr/bin/env python3
 
-from ctypes.wintypes import CHAR
-import string
-import sys
-from typing import List
-sys.path.append('./')
-from . import add, sub, pow, div, modulo, squared, str_concat
+from fonction.functione import functione as fct
 def loop_function(funct,repeat,*args):
+    print(f"funct : {funct}, repeat : {repeat}, args : {args}")
     if repeat < 0:
         return "erreur"
     if repeat == 0:
-        return determineTypeResult(args[0])
-    functione = {
-        "add" : add.add,
-        "sub" : sub.sub,
-        "pow" : pow.pow,
-        "div" : div.div,
-        "modulo" : modulo.modulo,
-        "squared" : squared.squared,
-        "str_concat" : str_concat.str_concat
-    }
+        return args[0]
+
+    as_list = list(args)
     for _ in range(repeat):
-        as_list = list(args)
-        as_list[0] = functione[funct](*as_list)
-    
-    return determineTypeResult(as_list[0])
+        as_list[0] = fct(funct)(*as_list)
+        print(as_list[0])
+    return as_list[0]
 
 def determineTypeResult(result):
         if isinstance(result, list):
