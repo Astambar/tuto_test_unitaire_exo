@@ -23,5 +23,6 @@ dictionaire={
 	"a": "abricot",
 	"b": "brouette",
 }
-keyRecupDic(dictionaire)
-valueRecupDic(dictionaire)
+if __name__ == '__main__':
+	keyRecupDic(dictionaire)
+	valueRecupDic(dictionaire)
